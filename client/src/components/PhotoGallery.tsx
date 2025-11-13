@@ -49,18 +49,24 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
             <img
               src={photo.url}
               alt={photo.caption}
+              ondrap={() => false}
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity">
               <div className="absolute bottom-2 left-2 right-2">
-                <p className="text-white text-xs font-medium">{photo.caption}</p>
+                <p className="text-white text-xs font-medium">
+                  {photo.caption}
+                </p>
               </div>
             </div>
           </div>
         ))}
       </div>
 
-      <Dialog open={selectedPhoto !== null} onOpenChange={() => closeLightbox()}>
+      <Dialog
+        open={selectedPhoto !== null}
+        onOpenChange={() => closeLightbox()}
+      >
         <DialogContent className="max-w-5xl p-0 overflow-hidden">
           {selectedPhoto !== null && (
             <div className="relative">
@@ -82,7 +88,9 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
               />
 
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                <p className="text-white text-center">{photos[selectedPhoto].caption}</p>
+                <p className="text-white text-center">
+                  {photos[selectedPhoto].caption}
+                </p>
               </div>
 
               {selectedPhoto > 0 && (

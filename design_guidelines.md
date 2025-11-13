@@ -1,4 +1,4 @@
-# Personal Recipe Box - Design Guidelines
+# Personal MOYA - Design Guidelines
 
 ## Design Approach
 **Reference-Based Approach** drawing from editorial food publications and modern recipe platforms (NYT Cooking, Bon Appétit, Notion's organization patterns). This application prioritizes visual storytelling and emotional connection through food photography while maintaining functional organization.
