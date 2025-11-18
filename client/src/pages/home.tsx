@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import RecipeHeader from "@/components/RecipeHeader";
 import SearchBar from "@/components/SearchBar";
 import CategoryFilter from "@/components/CategoryFilter";
@@ -56,6 +56,7 @@ const mockRecipes = [
 ];
 
 export default function Home() {
+  
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");
 
@@ -64,7 +65,8 @@ export default function Home() {
     const matchesCategory = activeCategory === "all" || recipe.category === activeCategory;
     return matchesSearch && matchesCategory;
   });
-
+  
+  
   return (
     <div className="min-h-screen bg-background">
       <RecipeHeader />
