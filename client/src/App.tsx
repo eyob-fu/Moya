@@ -7,13 +7,14 @@ import Home from "@/pages/home";
 import RecipeDetail from "@/pages/recipe-detail";
 import CreateRecipe from "@/pages/create-recipe";
 import NotFound from "@/pages/not-found";
-
+import LoginForm  from "@/components/LoginForm";
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/recipe/:id" component={RecipeDetail} />
       <Route path="/create" component={CreateRecipe} />
+      <Route path={"/login"}  component={LoginForm} />
       <Route component={NotFound} />
     </Switch>
   );
