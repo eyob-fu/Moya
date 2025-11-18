@@ -8,6 +8,8 @@ import RecipeDetail from "@/pages/recipe-detail";
 import CreateRecipe from "@/pages/create-recipe";
 import NotFound from "@/pages/not-found";
 import LoginForm  from "@/components/LoginForm";
+import SignForm  from "@/components/SignUpForm";
+
 function Router() {
   return (
     <Switch>
@@ -15,6 +17,7 @@ function Router() {
       <Route path="/recipe/:id" component={RecipeDetail} />
       <Route path="/create" component={CreateRecipe} />
       <Route path={"/login"}  component={LoginForm} />
+      <Route path={"/signup"}  component={SignForm} />
       <Route component={NotFound} />
     </Switch>
   );
