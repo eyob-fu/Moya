@@ -9,11 +9,11 @@ export default function GlobalProtected({ children }: { children: React.ReactNod
   const loggedIn = useSelector((state: RootState) => state.userInfo.loggedIn);
   const [location, setLocation] = useLocation();
 
-  const isPublicRoute = location === "/login" || location === "/signup" || location === "/";
+  const isPublicRoute = location === "/login" || location === "/signup" ;
 
   useEffect(() => {
     if (!loggedIn && !isPublicRoute) {
-      setLocation("/login");
+      window.location.href = "https://moyahome.mystrikingly.com/";
     }
   }, [loggedIn, isPublicRoute, setLocation]);
 
